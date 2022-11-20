@@ -256,6 +256,11 @@ function press () {
     }
 }
 
+function youreDone () {
+    document.getElementById("questionBox").innerHTML = "You've finished";
+    document.getElementById("inpt").style = "display:none";
+}
+
 function inDone(num) {
     for (let i=0; i<done.length; i++) {
         if (done[i] == num) {
@@ -266,21 +271,26 @@ function inDone(num) {
 }
 
 function questGen () {
-    wranswer = 0;
-    document.getElementById("ans").innerHTML = "";
-    document.getElementById("ratio").innerHTML = `${done.length}/${sets.length}`;
-    document.getElementById("inpt").value = "";
-    let question_num;
-    do {
-        question_num = Math.floor(Math.random() * sets.length);
-    } while (inDone(question_num))
-    let tmpStr = "";
-
-    for (let i=0; i<sets[question_num][1].length; i++) {
-        if (i > 0) tmpStr += ", ";
-        tmpStr += sets[question_num][1][i][0].toUpperCase() + sets[question_num][1][i].substr(1);
+    if (done.length == sets.length) {
+        youreDone();
     }
+    else {
+        wranswer = 0;
+        document.getElementById("ans").innerHTML = "";
+        document.getElementById("ratio").innerHTML = `${done.length}/${sets.length}`;
+        document.getElementById("inpt").value = "";
+        let question_num;
+        do {
+            question_num = Math.floor(Math.random() * sets.length);
+        } while (inDone(question_num))
+        let tmpStr = "";
 
-    document.getElementById("questionBox").innerHTML=tmpStr;   
-    document.getElementById("num").innerHTML=question_num;  
+        for (let i=0; i<sets[question_num][1].length; i++) {
+            if (i > 0) tmpStr += ", ";
+            tmpStr += sets[question_num][1][i][0].toUpperCase() + sets[question_num][1][i].substr(1);
+        }
+
+        document.getElementById("questionBox").innerHTML=tmpStr;   
+        document.getElementById("num").innerHTML=question_num;  
+    }
 }
