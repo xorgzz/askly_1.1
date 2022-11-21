@@ -8,6 +8,15 @@
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+	<div id="mySidenav" class="sidenav">
+  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<button>Main</button>
+		<div id="menu">
+			<button onclick="switcher(1)">Pol-eng person</button>
+			<button onclick="switcher(2)">Eng-eng person</button>
+		</div>
+	</div>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 	<center>
 	<div id="box">
 	<div id="questionBox"></div><div style="display: none;" id="num"></div><br>

@@ -1,4 +1,4 @@
-let sets = [[["absent-minded"],["roztargniony"]],
+let sets1 = [[["absent-minded"],["roztargniony"]],
 [["adventurous"],["śmiały","zuchwały","żądny przygód"]],
 [["affectionate"],["serdeczny","czuły"]],
 [["aggressive"],["agresywny"]],
@@ -216,7 +216,67 @@ let sets = [[["absent-minded"],["roztargniony"]],
 [["wise"],["mądry"]],
 [["witty"],["dowcipny"]]];
 let done = [];
-
+let sets2 = [[["agnostic"], ["a person who believes that it is not possible to know whether God exists or not"]],
+[["bully"], ["a person who uses their strength or power to frighten or hurt weaker people"]],
+[["castaway"], ["a person whose ship has sunk and who has had to swim to a lonely place, usually an island"]],
+[["conscientious objector"], ["a person who refuses to serve in the armed forces for moral reasons"]],
+[["deserter"], ["a person who leaves the army without permission"]],
+[["picket"], ["a person or group of people who stand outside the entrance to a building in order to protest about something"]],
+[["proprietor"], ["the owner of a business, a hotel"]],
+[["sadist"], ["a person who gets pleasure from hurting other people"]],
+[["scapegoat"], ["a person who is blamed for something bad that somebody else has done or for some failure"]],
+[["snob"], ["a person who admires people in the higher social classes too much and has no respect for people in the lower social classes"]],
+[["spendthrift"], ["a person who spends too much money or who wastes money"]],
+[["sponger"], ["a person who gets money, food, etc. from other people without doing anything for them or offering to pay"]],
+[["squatter"], ["a person who is living in a building or on land without permission and without paying rent"]],
+[["teetotaller"], ["a person who does not drink alcohol"]],
+[["veteran"], ["a person who has been a soldier, sailor, etc. in a war"]],
+[["big shot"], ["an important person"]],
+[["blackleg"], ["a person who continues to work when the people they work with are on strike"]],
+[["busybody"], ["a person who is too interested in what other people are doing"]],
+[["chatterbox"], ["a person who talks a lot, especially a child"]],
+[["daredevil"], ["a person who enjoys doing dangerous things, in a way that other people may think is stupid"]],
+[["dark horse"], ["a person who does not tell other people much about their life, and who surprises other people by having interesting qualities"]],
+[["gatecrasher"], ["a person who goes to a party or social event without being invited"]],
+[["grass widow"], ["a woman whose husband is away from home for long periods of time"]],
+[["guinea pig"], ["a person used in medical or other experiments"]],
+[["lame duck"], ["a person or an organization that is not very successful and that needs help"]],
+[["pain in the neck"], ["a person or thing that is very annoying"]],
+[["road hog"], ["a person who drives in a dangerous way without thinking about the safety of other road users"]],
+[["underdog"], ["a person that is thought to be in a weaker position than others and therefore not likely to be successful"]],
+[["wet blanket"], ["a person who is not enthusiastic about anything and who stops other people from enjoying themselves"]],
+[["whizz-kid"], ["a person who is very good and successful at something, especially at a young age"]],
+[["adolescent"], ["a young person who is no longer a child but not yet an adult"]],
+[["atheist"], ["doesn't believe in the existence of God"]],
+[["benefactor"], ["helps people by giving them money or other aid"]],
+[["bigot"], ["has strong and often unreasonable opinions and won't change them even when proved wrong"]],
+[["charlatan"], ["falsely claims to have special skills or knowledge, especially in medicine"]],
+[["civilian"], ["anyone who is not a soldier or any other member of the armed force"]],
+[["genius"], ["has very great ability and intelligence"]],
+[["hermit"], ["deliberately lives alone, away from other people and society"]],
+[["infant"], ["a very young child or baby"]],
+[["invigilator"], ["supervises people taking an examination and makes sure they don't cheat"]],
+[["miser"], ["keeps count of every penny and really hates spending money"]],
+[["patriot"], ["loves and supports his or her country and is willing to defend it"]],
+[["penfriend"], ["someone you write to but may never have met. He or she often lives abroad."]],
+[["sceptic"], ["does not readily believe claims or promises made by people"]],
+[["tycoon"], ["a rich and powerful businessman or industrialist"]],
+[["adjudicator"], ["judges a competition"]],
+[["anarchist"], ["believes that all forms of government are oppressive and should be destroyed"]],
+[["arbitrator"], ["is called in to settle a dispute between people or groups, usually at their request"]],
+[["beneficiary"], ["receives money or property from a will"]],
+[["bystander"], ["is present when something happens and sees it, but doesn't take part in it"]],
+[["conscript"], ["is made to serve in the armed forces of a country whether he wishes or not"]],
+[["crank"], ["has peculiar ideas and behaves in a strange way"]],
+[["cynic"], ["thinks people tend to act only in their own interests and are motivated by selfishness"]],
+[["degenerate"], ["behaves in a way that many people might find shocking or disgusting"]],
+[["expatriate"], ["is someone living in a country that is not their own"]],
+[["imposter"], ["dishonestly pretends to be someone else in order to get something he wants"]],
+[["juvenile"], ["is a child or young person who is not yet old enough to be regarded as an adult"]],
+[["loner"], ["prefers to spend time alone rather than in the company of other people"]],
+[["nationalist"], ["is very proud of his country and believes it to be better than other countries"]],
+[["scrounger"], ["tries to get food and money without working for them"]]]
+let sets = sets1;
 let wranswer = 0;
 
 function chck () {
@@ -250,6 +310,26 @@ function chck () {
     }
 }
 
+function switcher(who) {
+    switch (who) {
+    case 1:
+        if (sets != sets1) {
+            sets = sets1;
+            done = [];
+        }
+        break;
+    case 2:
+        if (sets != sets2) {
+            sets = sets2;
+            done = [];
+        }
+        break;
+    default:
+        break; 
+    }
+    questGen();
+}
+
 function press () {
     if (event.keyCode == 13) {
         chck();
@@ -268,6 +348,14 @@ function inDone(num) {
         }
     }
     return false;
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }
 
 function questGen () {
