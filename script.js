@@ -50,7 +50,7 @@ let sets1 = [[["absent-minded"],["roztargniony"]],
 [["determined"],["zdeterminowany"]],
 [["devoted"],["oddany","wierny"]],
 [["dishonest"],["nieuczciwy"]],
-[["disorganized"],["zdezorganizowany"]],
+[["disorganised","disorganized"],["zdezorganizowany"]],
 [["dominant","domineering"],["dominujący"]],
 [["down-to-earth"],["praktyczny","twardo stąpa po ziemi"]],
 [["easy-going"],["wyrozumiały / mało wymagający / spokojny"]],
@@ -127,7 +127,7 @@ let sets1 = [[["absent-minded"],["roztargniony"]],
 [["obstinate"],["uparty"]],
 [["open-minded"],["otwarty","pozbawiony uprzedzeń"]],
 [["optimistic"],["optymistyczny"]],
-[["organized"],["zorganizowany"]],
+[["organised", "organized"],["zorganizowany"]],
 [["outgoing"],["towarzyski"]],
 [["overbearing"],["apodyktyczny"]],
 [["passionate"],["pełen pasji"]],
@@ -215,7 +215,6 @@ let sets1 = [[["absent-minded"],["roztargniony"]],
 [["well-mannered"],["dobrze-wychowany"]],
 [["wise"],["mądry"]],
 [["witty"],["dowcipny"]]];
-let done = [];
 let sets2 = [[["agnostic"], ["a person who believes that it is not possible to know whether God exists or not"]],
 [["bully"], ["a person who uses their strength or power to frighten or hurt weaker people"]],
 [["castaway"], ["a person whose ship has sunk and who has had to swim to a lonely place, usually an island"]],
@@ -277,6 +276,7 @@ let sets2 = [[["agnostic"], ["a person who believes that it is not possible to k
 [["nationalist"], ["is very proud of his country and believes it to be better than other countries"]],
 [["scrounger"], ["tries to get food and money without working for them"]]]
 let sets = sets1;
+let done = [];
 let wranswer = 0;
 
 function chck () {
@@ -316,18 +316,23 @@ function switcher(who) {
         if (sets != sets1) {
             sets = sets1;
             done = [];
+            document.getElementById("inpt").style = "display:1";
+            questGen();
+            
         }
         break;
     case 2:
         if (sets != sets2) {
             sets = sets2;
             done = [];
+            document.getElementById("inpt").style = "display:1";
+            questGen();
+
         }
         break;
     default:
         break; 
     }
-    questGen();
 }
 
 function press () {
@@ -338,6 +343,8 @@ function press () {
 
 function youreDone () {
     document.getElementById("questionBox").innerHTML = "You've finished";
+    document.getElementById("ans").innerHTML = "";
+    document.getElementById("ratio").innerHTML = `${done.length}/${sets.length}`;
     document.getElementById("inpt").style = "display:none";
 }
 
