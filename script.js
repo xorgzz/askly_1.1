@@ -412,7 +412,7 @@ let all_sets = [
 [["permanent contract"],["umowa na czas nieokreślony"]],
 [["repetitive"],["powtarzalny, monotonny"]],
 [["resign"],["odejść z pracy, zrezygnować"]],
-[["self-employed"],["samozatrudniony"]],
+[["self-employed"],["samozatrudniony (self-...)"]],
 [["sick leave"],["zwolnienie lekarskie"]],
 [["temporary contract"],["umowa na czas określony"]],
 [["timetable"],["plan lekcji, zajęć"]],
