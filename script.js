@@ -1,3 +1,4 @@
+let titles = ["Pol-eng person", "Eng-eng person", "Family & Marriage", "Job & Work"];
 let all_sets = [
 // Eng-Pol Personality
 [[["absent-minded"],["roztargniony"]],
@@ -435,6 +436,7 @@ let all_sets = [
 
 ];
 
+
 let sets = all_sets[0];
 let done = [];
 let wranswer = 0;
@@ -471,11 +473,17 @@ function chck () {
 }
 
 function switcher(who) {
-    who --;
     if (sets != all_sets[who]) sets = all_sets[who];
     done = [];
     document.getElementById("inpt").style = "display:1";
     questGen();
+}
+
+function deploy_div() {
+	document.getElementById("menu").innerHTML="";
+	for (let i=0; i<titles.length; i++) {
+		document.getElementById("menu").innerHTML += `<button onclick="switcher(${i})">${titles[i]}</button>`
+	}
 }
 
 function press () {
@@ -501,11 +509,12 @@ function inDone(num) {
 }
 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+	deploy_div();
+	document.getElementById("mySidenav").style.width = "250px";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("mySidenav").style.width = "0";
 }
 
 function questGen () {

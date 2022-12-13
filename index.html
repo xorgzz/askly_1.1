@@ -11,12 +11,7 @@
 	<div id="mySidenav" class="sidenav">
   		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<button>Main</button>
-		<div id="menu">
-			<button onclick="switcher(1)">Pol-eng person</button>
-			<button onclick="switcher(2)">Eng-eng person</button>
-			<button onclick="switcher(3)">Family & Marriage</button>
-			<button onclick="switcher(4)">Job & Work</button>
-		</div>
+		<div id="menu"></div>
 	</div>
 	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 	<center>
@@ -26,7 +21,7 @@
 	<br>
 	<b id="ratio"></b>
 	<br><br>
-	<div id="ans"></div>
+	<div id="ans" onload="deploy_div()"></div>
 	</div>
 	</center>
 </body>
