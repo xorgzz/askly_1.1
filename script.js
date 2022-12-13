@@ -278,7 +278,7 @@ let sets2 = [[["agnostic"], ["a person who believes that it is not possible to k
 [["scrounger"], ["tries to get food and money without working for them"]]]
 
 let sets3 = [[["extended family"],["rodzina wielopokoleniowa"]],
-[["father figure"],["autorytet", "ojcowski wzorzec"]],
+[["father figure"],["autorytet ojcowski"]],
 [["great-grandparents"],["pradziadkowie"]],
 [["grow up"],["dorastać"]],
 [["grow"],["rosnąć, urosnąć"]],
