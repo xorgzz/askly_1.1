@@ -277,7 +277,7 @@ let sets2 = [[["agnostic"], ["a person who believes that it is not possible to k
 [["nationalist"], ["is very proud of his country and believes it to be better than other countries"]],
 [["scrounger"], ["tries to get food and money without working for them"]]]
 
-let set3 = [[["extended family"],["rodzina wielopokoleniowa"]],
+let sets3 = [[["extended family"],["rodzina wielopokoleniowa"]],
 [["father figure"],["autorytet"]],
 [["great-grandparents"],["pradziadkowie"]],
 [["grow up"],["dorastać"]],
@@ -364,25 +364,25 @@ function switcher(who) {
     switch (who) {
     case 1:
         if (sets != sets1) {
-            sets = sets1;
-            done = [];
-            document.getElementById("inpt").style = "display:1";
-            questGen();
-            
+            sets = sets1;   
         }
         break;
     case 2:
         if (sets != sets2) {
             sets = sets2;
-            done = [];
-            document.getElementById("inpt").style = "display:1";
-            questGen();
-
+        }
+        break;
+    case 3:
+        if (sets != sets3) {
+            sets = sets3;
         }
         break;
     default:
-        break; 
+        return;
     }
+    done = [];
+    document.getElementById("inpt").style = "display:1";
+    questGen();
 }
 
 function press () {
