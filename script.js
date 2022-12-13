@@ -1,4 +1,6 @@
-let sets1 = [[["absent-minded"],["roztargniony"]],
+let all_sets = [
+// Eng-Pol Personality
+[[["absent-minded"],["roztargniony"]],
 [["adventurous"],["śmiały","zuchwały","żądny przygód"]],
 [["affectionate"],["serdeczny","czuły"]],
 [["aggressive"],["agresywny"]],
@@ -214,9 +216,9 @@ let sets1 = [[["absent-minded"],["roztargniony"]],
 [["well-balanced"],["zrównoważony"]],
 [["well-mannered"],["dobrze-wychowany"]],
 [["wise"],["mądry"]],
-[["witty"],["dowcipny"]]];
-
-let sets2 = [[["agnostic"], ["a person who believes that it is not possible to know whether God exists or not"]],
+[["witty"],["dowcipny"]]],
+// Eng-Eng Personality
+[[["agnostic"], ["a person who believes that it is not possible to know whether God exists or not"]],
 [["bully"], ["a person who uses their strength or power to frighten or hurt weaker people"]],
 [["castaway"], ["a person whose ship has sunk and who has had to swim to a lonely place, usually an island"]],
 [["conscientious objector"], ["a person who refuses to serve in the armed forces for moral reasons"]],
@@ -275,9 +277,9 @@ let sets2 = [[["agnostic"], ["a person who believes that it is not possible to k
 [["juvenile"], ["is a child or young person who is not yet old enough to be regarded as an adult"]],
 [["loner"], ["prefers to spend time alone rather than in the company of other people"]],
 [["nationalist"], ["is very proud of his country and believes it to be better than other countries"]],
-[["scrounger"], ["tries to get food and money without working for them"]]]
-
-let sets3 = [[["extended family"],["rodzina wielopokoleniowa"]],
+[["scrounger"], ["tries to get food and money without working for them"]]],
+// Family & Marriage
+[[["extended family"],["rodzina wielopokoleniowa"]],
 [["father figure"],["autorytet ojcowski"]],
 [["great-grandparents"],["pradziadkowie"]],
 [["grow up"],["dorastać"]],
@@ -344,9 +346,96 @@ let sets3 = [[["extended family"],["rodzina wielopokoleniowa"]],
 [["family traits"],["cechy rodzinne (genetyczne)"]],
 [["ancestor"],["przodek"]],
 [["descendant"],["potomek"]],
-[["sibling"],["rodzeństwo"]]];
+[["sibling"],["rodzeństwo"]]],
+// Jobs
+[[["voluntary"], ["ochotniczo", "dobrowolnie"]],
+[["bonus"],["premia"]],
+[["monotonous"],["jednostajny"]],
+[["motivating"],["motywujący"]],
+[["training"],["szkolenie"]],
+[["unpaid"],["nieodpłatnie"]],
+[["wage"],["tygodniówka"]],
+[["position"],["stanowisko"]],
+[["quit"],["odejść"]],
+[["rewarding"],["satysfakcjonujący"]],
+[["salary"],["pensja"]],
+[["skills"],["umiejętności"]],
+[["staff"],["personel"]],
+[["tedious"],["nużący"]],
+[["perk"],["dodatek"]],
+[["benefits"],["dodatki","świadczenia socjalne"]],
+[["hire"],["zatrudnić", "wynająć"]],
+[["hours"],["godziny pracy"]],
+[["impatient"],["niecierpliwy"]],
+[["intern"],["stażysta"]],
+[["internship"],["staż"]],
+[["irrelevant"],["nieistotny"]],
+[["demanding"],["wymagający"]],
+[["demoralizing"],["demoralizujący"]],
+[["unemployment"],["bezrobocie"]],
+[["commute"],["dojeżdżać do pracy"]],
+[["pension"],["emerytura"]],
+[["high-flyer"],["młody ambitny"]],
+[["on welfare"],["na zasiłku"]],
+[["unsociable hours"],["nietypowe godziny (pracy)"]],
+[["night shift"],["nocna zmiana"]],
+[["carry the can for sb"],["płacić za winy kogoś innego"]],
+[["work overtime"],["pracować w nadgodzinach"]],
+[["white collar worker"],["pracownik umysłowy"]],
+[["incentive"],["premia, motywacja"]],
+[["semi-skilled"],["przyuczony, bez pełnych kwalifikacji"]],
+[["fixed income"],["stały dochód"]],
+[["hand in your notice"],["wręczyć wypowiedzenie"]],
+[["sickness benefit"],["zasiłek chorobowy"]],
+[["dismiss"],["zwolnić"]],
+[["employ"],["zatrudnić"]],
+[["be out of work"],["nie mieć pracy"]],
+[["be responsible for"],["być odpowiedzialnym za coś"]],
+[["job security"],["pewność stałego zatrudnienia"]],
+[["employee"],["pracownik"]],
+[["career ladder"],["szczeble kariery"]],
+[["challenging"],["wymagający, ambitny"]],
+[["clock off"],["wyjść z pracy","odbić kartę zegarową"]],
+[["colleague"],["kolega z pracy"]],
+[["compassionate leave"],["urlop okolicznościowy"]],
+[["co-worker"],["współpracownik"]],
+[["deal with"],["zajmować się czymś"]],
+[["events management"],["organizacja imprez"]],
+[["fixed-term contract"],["umowa na czas określony"]],
+[["freelance contract"],["umowa zlecenie"]],
+[["full-time contract"],["umowa o pracę na pełen etat"]],
+[["full-time occupation"],["zajęcie na pełen etat"]],
+[["get a rise"],["dostać podwyżkę"]],
+[["get promoted"],["awansować"]],
+[["part-time contract"],["umowa na część etatu"]],
+[["permanent contract"],["umowa na czas nieokreślony"]],
+[["repetitive"],["powtarzalny, monotonny"]],
+[["resign"],["odejść z pracy, zrezygnować"]],
+[["self-employed"],["samozatrudniony"]],
+[["sick leave"],["zwolnienie lekarskie"]],
+[["temporary contract"],["umowa na czas określony"]],
+[["timetable"],["plan lekcji, zajęć"]],
+[["unpaid leave"],["urlop bezpłatny"]],
+[["work experience"],["doświadczenie zawodowe"]],
+[["employer"],["pracodawca"]],
+[["be sacked"],["być wylanym"]],
+[["ability"],["umiejętność"]],
+[["workforce"],["zatrudnieni"]],
+[["academic achievement"], ["osiągnięcia naukowe"]],
+[["apply for"], ["starać się o (pracę)"]],
+[["be fired"],["zostać zwolnionym"]],
+[["be off work"],["mieć wolne w pracy"]],
+[["be made redundant"],["zostać zredukowanym"]],
+[["good prospects"],["dobre perspektywy"]],
+[["job-hunting"],["poszukiwanie pracy"]],
+[["maternity leave"],["urlop macierzyński"]],
+[["paternity leave"],["urlop ojcowski"]],
+[["be in charge of"],["być odpowiedzialnym za coś, zarządzać"]],
+[["be laid off"],["być zwolnionym (możliwe, że tymczasowo)"]]]
 
-let sets = sets1;
+];
+
+let sets = all_sets[0];
 let done = [];
 let wranswer = 0;
 
@@ -382,25 +471,8 @@ function chck () {
 }
 
 function switcher(who) {
-    switch (who) {
-    case 1:
-        if (sets != sets1) {
-            sets = sets1;   
-        }
-        break;
-    case 2:
-        if (sets != sets2) {
-            sets = sets2;
-        }
-        break;
-    case 3:
-        if (sets != sets3) {
-            sets = sets3;
-        }
-        break;
-    default:
-        return;
-    }
+    who --;
+    if (sets != all_sets[who]) sets = all_sets[who];
     done = [];
     document.getElementById("inpt").style = "display:1";
     questGen();

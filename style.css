@@ -46,6 +46,8 @@ button {
 	background-color: transparent;
 	border: none;
 	margin: 0px;
+	width: 300px;
+	text-align: left;
 }
 
 .sidenav {
