@@ -380,7 +380,7 @@ let all_sets = [
 [["on welfare"],["na zasiłku"]],
 [["unsociable hours"],["nietypowe godziny (pracy)"]],
 [["night shift"],["nocna zmiana"]],
-[["carry the can for sb"],["płacić za winy kogoś innego"]],
+[["carry the can"],["płacić za winy kogoś innego"]],
 [["work overtime"],["pracować w nadgodzinach"]],
 [["white collar worker"],["pracownik umysłowy"]],
 [["incentive"],["premia, motywacja"]],
